@@ -58,10 +58,12 @@ h2{
     font-family: 'Press Start 2P';
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);   
     line-height: 2;
-    width: 350px;
-    height: 120px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    min-height: 120px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 20px;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     backdrop-filter: blur(5px);
@@ -569,7 +571,11 @@ a {
 /* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 20px;
+        padding-inline: 20px;
+        padding-block: 50px;
+        margin: 20px;
+        min-height: auto;
     }
 
     h1 {
@@ -590,8 +596,13 @@ a {
     }
 
     h2 {
-        font-size: 0.8em;
-        padding: 0 15px;
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        font-size: 10px;
+        height: auto;
+        min-height: 100px;
+        margin-bottom: 20px;
     }
 
     .discord-section, .github-section, .music-player {
@@ -637,6 +648,13 @@ a {
 
 /* Ajustes para telas muito pequenas */
 @media (max-width: 360px) {
+    body {
+        padding: 15px;
+        padding-inline: 15px;
+        padding-block: 30px;
+        margin: 10px;
+    }
+
     h1 {
         font-size: 1.5em;
     }
@@ -661,5 +679,11 @@ a {
 
     .discord-section h3, .github-section h3 {
         font-size: 9px;
+    }
+
+    h2 {
+        padding: 10px;
+        font-size: 9px;
+        min-height: 80px;
     }
 }
